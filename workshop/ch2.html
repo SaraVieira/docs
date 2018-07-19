@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vue Vixens Workshops | 📋 Chapter 2: Build a Pet Gallery</title>
+    <meta name="description" content="Workshops to teach web and mobile development with Vue.js to beginners">
+    
+    
+    <link rel="preload" href="/docs/assets/css/13.styles.c8cfe150.css" as="style"><link rel="preload" href="/docs/assets/js/app.1bbca911.js" as="script"><link rel="preload" href="/docs/assets/js/8.49ac07dc.js" as="script"><link rel="prefetch" href="/docs/assets/js/0.338139ca.js"><link rel="prefetch" href="/docs/assets/js/1.a8fd060e.js"><link rel="prefetch" href="/docs/assets/js/2.f92594e8.js"><link rel="prefetch" href="/docs/assets/js/3.fe4d919c.js"><link rel="prefetch" href="/docs/assets/js/4.6a62e0f5.js"><link rel="prefetch" href="/docs/assets/js/5.5b41295b.js"><link rel="prefetch" href="/docs/assets/js/6.2efc603b.js"><link rel="prefetch" href="/docs/assets/js/7.860db740.js"><link rel="prefetch" href="/docs/assets/js/9.add7f607.js"><link rel="prefetch" href="/docs/assets/js/10.43975eb2.js"><link rel="prefetch" href="/docs/assets/js/11.e2ca8b48.js"><link rel="prefetch" href="/docs/assets/js/12.dc4b321a.js">
+    <link rel="stylesheet" href="/docs/assets/css/13.styles.c8cfe150.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/docs/" class="home-link router-link-active"><!----><span class="site-name">
+      Vue Vixens Workshops
+    </span></a><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><nav class="nav-links can-hide"><div class="nav-item"><a href="/docs/" class="nav-link">Home</a></div><div class="nav-item"><a href="http://www.vuevixens.org" target="_blank" rel="noopener noreferrer" class="nav-link">Team</a></div><a href="https://github.com/vuevixens/docs" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header><div class="sidebar-mask"></div><div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/docs/" class="nav-link">Home</a></div><div class="nav-item"><a href="http://www.vuevixens.org" target="_blank" rel="noopener noreferrer" class="nav-link">Team</a></div><a href="https://github.com/vuevixens/docs" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav><ul class="sidebar-links"><li><a href="/docs/workshop/" class="sidebar-link">About Vue Vixens Workshops</a></li><li><a href="/docs/workshop/ch1.html" class="sidebar-link">🐶 Chapter 1: Introducing the My Pet Shop Web App</a></li><li><a href="/docs/workshop/ch2.html" class="active sidebar-link">🐶 Chapter 2: Build a Pet Gallery</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/workshop/ch2.html#instructions" class="sidebar-link">Instructions</a></li><li class="sidebar-sub-header"><a href="/docs/workshop/ch2.html#the-router" class="sidebar-link">The Router</a></li><li class="sidebar-sub-header"><a href="/docs/workshop/ch2.html#create-the-home-page" class="sidebar-link">Create the Home Page</a></li><li class="sidebar-sub-header"><a href="/docs/workshop/ch2.html#create-a-pets-page" class="sidebar-link">Create a Pets Page</a></li><li class="sidebar-sub-header"><a href="/docs/workshop/ch2.html#add-the-routes" class="sidebar-link">Add the Routes</a></li><li class="sidebar-sub-header"><a href="/docs/workshop/ch2.html#add-navigation" class="sidebar-link">Add Navigation</a></li><li class="sidebar-sub-header"><a href="/docs/workshop/ch2.html#build-up-some-data" class="sidebar-link">Build up some data</a></li><li class="sidebar-sub-header"><a href="/docs/workshop/ch2.html#append-the-data-to-a-list" class="sidebar-link">Append the Data to a List</a></li><li class="sidebar-sub-header"><a href="/docs/workshop/ch2.html#refactor-the-template-create-a-prop" class="sidebar-link">Refactor the template - create a Prop!</a></li></ul></li><li><a href="/docs/workshop/ch3.html" class="sidebar-link">🐶 Chapter 3: Connect your Project to an API</a></li><li><a href="/docs/workshop/ch4.html" class="sidebar-link">🐶 Chapter 4: Create a Dog Adoption Experience</a></li><li><a href="/docs/workshop/ch5.html" class="sidebar-link">🐶 Chapter 5: Complete the Adoption Experience with a Form</a></li><li><a href="/docs/workshop/ch6.html" class="sidebar-link">🐶 Chapter 6: My First Mobile App: Tindogs</a></li><li><a href="/docs/workshop/mini1.html" class="sidebar-link">🐾 Mini Workshop 1: Build a Mobile App to Choose a Pet</a></li><li><a href="/docs/workshop/mini2.html" class="sidebar-link">🐾 Mini Workshop 2: Build A Web App to Fetch &amp; Like Pets</a></li><li><a href="/docs/workshop/mini3.html" class="sidebar-link">🌈 Mini Workshop 3: Build A Rainbow/Unicorn App that Lights up a Photon!</a></li></ul></div><div class="page"><div class="content"><h1 id="📋-chapter-2-build-a-pet-gallery"><a href="#📋-chapter-2-build-a-pet-gallery" aria-hidden="true" class="header-anchor">#</a> 📋 Chapter 2: Build a Pet Gallery</h1><table><thead><tr><th><strong>Project Goal</strong></th><th>Learn how to manipulate data in a web app</th></tr></thead><tbody><tr><td><strong>What you’ll learn</strong></td><td>Using static data, you'll build a card interface to show many adoptable dogs</td></tr><tr><td><strong>Tools you’ll need</strong></td><td>A modern browser like Chrome. If using Chrome, download Chrome DevTools for Vue.js. An account in CodeSandbox.io. If you get lost, import the starting point for this chapter <a href="https://github.com/VueVixens/projects/tree/master/chapter-1-end" target="_blank" rel="noopener noreferrer">here</a>. Instructions on how to do this are in <a href="/docs/workshop/appendix_1.html">Appendix 1</a></td></tr><tr><td><strong>Time needed to complete</strong></td><td>1 hour</td></tr></tbody></table><h2 id="instructions"><a href="#instructions" aria-hidden="true" class="header-anchor">#</a> Instructions</h2><p>If you need to restart your project, clone <a href="https://github.com/VueVixens/projects/tree/master/chapter-1-end" target="_blank" rel="noopener noreferrer">this repo</a> into Code Sandbox after logging in.</p><p>At this point, we have only a home page, but we want to add one more page to contain pet cards. Let's create a single-page application with a navigation bar listing &quot;home&quot; and &quot;pets&quot;. Clicking on the &quot;pets&quot; page will bring us to the new page we're creating now.</p><div class="tip custom-block"><p class="custom-block-title">💡</p><p>&quot;A single-page application (SPA) is a web application or web site that interacts with the user by dynamically rewriting the current page rather than loading entire new pages from a server&quot; (<a href="https://en.wikipedia.org/wiki/Single-page_application" target="_blank" rel="noopener noreferrer">Wikipedia</a>)</p></div><p>To create our SPA with Vue, we need to use the <a href="https://github.com/vuejs/vue-router" target="_blank" rel="noopener noreferrer">vue-router</a>. The vue-router is Vue's official router (the library that makes moving from page to page easy and efficient). It's specifically designed to work with SPAs, which have some special requirements like nested routes and passing data over the router. Add it to your app's dependencies (click the <code>Add Dependency</code> button and search for <code>vue-router</code>), and install it (like we did earlier with Vuetify).</p><h2 id="the-router"><a href="#the-router" aria-hidden="true" class="header-anchor">#</a> The Router</h2><p>Open <code>main.js</code> file and import vue-router:</p><pre class="language-text"><code>import VueRouter from 'vue-router';
+</code></pre><p>Now we need to use the plugin with <code>Vue.use()</code> global method:</p><pre class="language-text"><code>Vue.use(VueRouter);
+</code></pre><div class="tip custom-block"><p class="custom-block-title">💡</p><p>Stop and think about our app's architecture. In our application, the header and footer will be present on each page and the content between them will change. To accomplish this, the component matched by the route will be rendered inside a <code>&lt;router-view&gt;</code> tag. We need to move away from having all our app's parts in App.vue, so we need to do some refactoring.</p></div><h2 id="create-the-home-page"><a href="#create-the-home-page" aria-hidden="true" class="header-anchor">#</a> Create the Home Page</h2><p>Let's create a separate component for all the elements contained in <code>&lt;div class=&quot;wrapper&quot;&gt;</code>.</p><ul><li><p>Go to the <code>views</code> folder in <code>src</code> (create it if it doesn't exist) and create a file called <code>Home.vue</code>.</p></li><li><p>Add <code>&lt;template&gt;&lt;/template&gt;</code> tag to this new file</p></li><li><p>Go to the <code>App.vue</code> file. Copy the <code>&lt;div class=&quot;wrapper&quot;&gt;</code> and all elements inside it and paste it inside template in <code>Home.vue</code>. This is all the code between the <code>&lt;header&gt;</code> and <code>&lt;footer&gt;</code> tags. Delete that code from <code>App.vue</code>.</p></li></ul><h2 id="create-a-pets-page"><a href="#create-a-pets-page" aria-hidden="true" class="header-anchor">#</a> Create a Pets Page</h2><p>Now, let's create a <code>Pets.vue</code> page. In <code>src/views</code>, like you did for the Home.vue page, create a <code>Pets.vue</code> file. Add a layout that will use the Vuetify card styling:</p><pre class="language-text"><code>&lt;template&gt;
+  &lt;v-container grid-list-md fluid&gt;
+    &lt;v-layout wrap&gt;
+      &lt;v-flex xs12 sm4 md3&gt;
+        &lt;v-card color=&quot;grey lighten-2&quot;&gt;
+          &lt;v-card-media src=&quot;https://goo.gl/6CQNDo&quot; height=&quot;170px&quot;&gt;
+          &lt;/v-card-media&gt;
+          &lt;v-card-title&gt;
+            &lt;div&gt;
+              &lt;h3&gt;Looking for a dog?&lt;/h3&gt;
+            &lt;/div&gt;
+          &lt;/v-card-title&gt;
+        &lt;/v-card&gt;
+      &lt;/v-flex&gt;
+    &lt;/v-layout&gt;
+  &lt;/v-container&gt;
+&lt;/template&gt;
+
+&lt;style scoped&gt;
+p {
+  margin: 0;
+}
+&lt;/style&gt;
+</code></pre><h2 id="add-the-routes"><a href="#add-the-routes" aria-hidden="true" class="header-anchor">#</a> Add the Routes</h2><p>Great, now we have separate components for our home and pets pages! You'll notice however that the content doesn't yet show up in the app. We have to make routes for these pages.</p><ul><li>Let's go back to <code>main.js</code>. First, let's import our new components under the list of imports at the top:</li></ul><pre class="language-text"><code>import Home from &quot;./views/Home&quot;;
+import Pets from &quot;./views/Pets&quot;;
+</code></pre><ul><li>Now we can create routes. Each route is an object specifying a path and a component which will be rendered in this path. Let's add two routes: one is for our homepage and one for pets. Add this code under the <code>Vue.use...</code> lines:</li></ul><pre class="language-text"><code>const routes = [
+  { path: &quot;/&quot;, component: Home },
+  { path: &quot;/pets&quot;, component: Pets }
+];
+</code></pre><ul><li>Now we have to create a <code>VueRouter</code> instance and pass our routes object to it. Add this line below the <code>const routes</code> object you just pasted in:</li></ul><pre class="language-text"><code>const router = new VueRouter({ routes });
+</code></pre><ul><li>Finally, we need to add the router to our Vue instance. To do this, just add a reference to <code>router</code> right after the <code>template: &quot;&lt;App/&gt;&quot;,</code> string:</li></ul><pre class="language-text"><code>new Vue({
+   el: &quot;#app&quot;,
+   components: { App },
+   template: &quot;&lt;App/&gt;&quot;,
+   router
+ });
+</code></pre><ul><li>Now open App.vue. Replace the whole <code>&lt;div class=&quot;wrapper&quot;&gt;</code> chunk that you ripped out with a <code>&lt;router-view&gt;&lt;/router-view&gt;</code> tag, sandwiching it right between the header and footer. Your store just came back to life!</li></ul><p>Test your progress. Add <code>/pets</code> at the end of the URL string in the address bar. Now you can see the Pets component instead of Home!</p><h2 id="add-navigation"><a href="#add-navigation" aria-hidden="true" class="header-anchor">#</a> Add Navigation</h2><p>To make our navigation easier we will create a simple navigation bar using Vuetify, which we already implemented in Chapter 1.</p><p>The toolbar component in Vuetify is called <code>v-toolbar</code>. Let's add it right below the <code>h1</code> tag in our header:</p><pre class="language-text"><code>&lt;v-toolbar&gt;
+    &lt;v-toolbar-items&gt;
+        &lt;v-btn to=&quot;/&quot; flat&gt;Home&lt;/v-btn&gt;
+        &lt;v-btn to=&quot;/pets&quot; flat&gt;Pets&lt;/v-btn&gt;
+    &lt;/v-toolbar-items&gt;
+&lt;/v-toolbar&gt;
+</code></pre><p>You can see two buttons in this toolbar. Each of them has a <code>to</code> attribute: it's a router-link to a certain route. Now we can easily switch between pages - give it a try by clicking the buttons.</p><p>Ok, fine, but there are no pets, so let's add some!</p><h2 id="build-up-some-data"><a href="#build-up-some-data" aria-hidden="true" class="header-anchor">#</a> Build up some data</h2><p>We're going to add some dummy data in a new folder called <code>data</code>. Create that folder in <code>src</code> and add a blank file called <code>dogs.js</code>. Paste in the following json object:</p><pre class="language-text"><code>export const Dogs = [
+  {
+    name: &quot;Max&quot;,
+    breed: &quot;husky&quot;,
+    img: &quot;https://dog.ceo/api/img/husky/n02110185_1469.jpg&quot;
+  },
+  {
+    name: &quot;Rusty&quot;,
+    breed: &quot;shiba&quot;,
+    img: &quot;https://dog.ceo/api/img/shiba/shiba-13.jpg&quot;
+  },
+  {
+    name: &quot;Rocco&quot;,
+    breed: &quot;boxer&quot;,
+    img: &quot;https://dog.ceo/api/img/boxer/n02108089_14112.jpg&quot;
+  },
+  {
+    name: &quot;Zoey&quot;,
+    breed: &quot;beagle&quot;,
+    img: &quot;https://dog.ceo/api/img/beagle/n02088364_11136.jpg&quot;
+  },
+  {
+    name: &quot;Duke&quot;,
+    breed: &quot;doberman&quot;,
+    img: &quot;https://dog.ceo/api/img/doberman/n02107142_4653.jpg&quot;
+  },
+  {
+    name: &quot;Lily&quot;,
+    breed: &quot;malamute&quot;,
+    img: &quot;https://dog.ceo/api/img/malamute/n02110063_1104.jpg&quot;
+  },
+  {
+    name: &quot;Winston&quot;,
+    breed: &quot;pug&quot;,
+    img: &quot;https://dog.ceo/api/img/pug/n02110958_15626.jpg&quot;
+  },
+  {
+    name: &quot;Angel&quot;,
+    breed: &quot;samoyed&quot;,
+    img: &quot;https://dog.ceo/api/img/samoyed/n02111889_4470.jpg&quot;
+  }
+];
+</code></pre><p>It exports one <code>const</code>, <code>Dogs</code>, containing all the data we need.</p><ul><li>Let's import this data into our pets component. Go to the <code>Pets.vue</code> file and add the following script block under the <code>&lt;template&gt;</code> block. This tag imports the Dogs data:</li></ul><pre class="language-text"><code>&lt;script&gt;
+  import { Dogs } from &quot;../data/dogs&quot;;
+&lt;/script&gt;
+</code></pre><p>Now we have to add this data to our component data property. Edit the <code>&lt;script&gt;</code> tag:</p><pre class="language-text"><code>&lt;script&gt;
+  import { Dogs } from &quot;../data/dogs&quot;;
+  export default {
+    data() {
+      return {
+        dogs: Dogs
+      };
+    }
+   };
+  &lt;/script&gt;
+</code></pre><p>This script ensures that the array <code>dogs</code> is a part of <code>Pets</code> component's state and can be used in our template.</p><h2 id="append-the-data-to-a-list"><a href="#append-the-data-to-a-list" aria-hidden="true" class="header-anchor">#</a> Append the Data to a List</h2><p>Now we want to make a list of dogs. The easiest way to do this is to loop over an array and append data to a list. Our <code>dogs</code> are an array, so it's ready to be appended. To render a list of items based on an array Vue has a <code>v-for</code> directive, which will iterate through this array and render each item. Let's add this directive to our <code>v-flex</code> element in <code>Pets.vue</code>:</p><pre class="language-text"><code>&lt;v-flex xs12 sm4 md3 v-for=&quot;pet in dogs&quot; :key=&quot;pet.breed&quot;&gt;
+</code></pre><p>To properly loop and append, you need to provide a unique key attribute for each item. In our case, the dog's breed will be the key.</p><p>You can see now we have eight <code>v-card</code>s with the same text and image. Let's fix that!</p><p>Inside the <code>v-for</code> directive our <em>current</em> dog will be called a <code>pet</code>.</p><div class="tip custom-block"><p class="custom-block-title">💡</p><p>Remember, we chose this name inside the directive; if we had written <code>v-for=&quot;dog in dogs&quot;</code> each item will be called <code>dog</code>).</p></div><p>Checking the <code>dogs.js</code> file we can see each dog has 3 properties: name, breed and img. Let's display the image inside the <code>v-card-media</code> component.</p><p>But if we simply replace <code>src</code> value with <code>pet.img</code>...</p><pre class="language-text"><code>&lt;v-card-media src=&quot;pet.img&quot; height=&quot;170px&quot;&gt;
+</code></pre><p>We will have no pictures. Why? Because we're trying to pass a static value, some file called <code>pet.img</code> and there is no such file in this data. To bind attributes dynamically we need a <code>v-bind</code> directive or its shortcut <code>:</code>.</p><pre class="language-text"><code>&lt;v-card-media :src=&quot;pet.img&quot; height=&quot;170px&quot;&gt;
+</code></pre><div class="tip custom-block"><p class="custom-block-title">💡</p><p>The <code>v-bind</code> directive dynamically binds one or more attributes, or a component prop to an expression. That little <code>:</code> makes all the difference!</p></div><p>Now it works!</p><p>Now we have to display the dog's name. For text, Vue uses <em>&quot;mustache&quot; syntax</em> - double curly braces like these: <code></code>. The mustache tag will be replaced with the value of the binded property. Edit the <code>&lt;h3&gt;</code> tag to use curly braces and place the dog's name:</p><pre class="language-text"><code>&lt;h3&gt;{{pet.name}}&lt;/h3&gt;
+</code></pre><p>The only thing left is the dog's breed. Let's add one more <code>&lt;p&gt;&lt;/p&gt;</code> tag right below the name and display breed there:</p><pre class="language-text"><code>&lt;p&gt;{{pet.breed}}&lt;/p&gt;
+</code></pre><p>Everything works nicely but our template is getting a little bulky. We can refactor and trim it down. Let's create a <code>Dog</code> component and pass the current pet to it with a prop.</p><div class="tip custom-block"><p class="custom-block-title">💡</p><p>Props are custom attributes you can register on a component. When a value is passed to a prop attribute, it becomes a _prop_erty on that component instance. In our case the <code>Dog</code> component will have a <code>dog</code> property, passed from its parent <code>Pets</code> component.</p></div><h2 id="refactor-the-template-create-a-prop"><a href="#refactor-the-template-create-a-prop" aria-hidden="true" class="header-anchor">#</a> Refactor the template - create a Prop!</h2><p>Create a new folder inside the <code>src</code> and name it <code>components</code>.</p><p>Inside the components folder we will create a new file and name it <code>Dog.vue</code>. Open this file and add <code>&lt;template&gt;&lt;/template&gt;</code> and <code>&lt;script&gt;&lt;/script&gt;</code> tags. Now our file looks this way:</p><pre class="language-text"><code>&lt;template&gt;
+	
+&lt;/template&gt;
+	
+&lt;script&gt;
+	
+&lt;/script&gt;
+</code></pre><p>Copy the whole <code>v-card</code> component from <code>Pets.vue</code> and paste it inside the template tag. You can delete it from <code>Pets.vue</code>.</p><p>As mentioned above, we will have a <code>dog</code> property in our <code>Dog</code> component. Let's add a <code>props</code> option to our component. First, we need to create an export statement inside our <code>script</code> tag (so later we will be able to import our <code>Dog</code> component inside the <code>Pets</code> one). Add this <code>&lt;script&gt;</code> block to <code>Dog.vue</code>:</p><pre class="language-text"><code>&lt;script&gt;
+   export default {
+  
+   }
+&lt;/script&gt;
+</code></pre><p>Now we can add <code>props</code> option to this object and a prop <code>dog</code>:</p><pre class="language-text"><code>&lt;script&gt;
+	export default {
+	  props: {
+	    dog: {
+	      type: Object
+	    }
+	  }
+	};
+&lt;/script&gt;
+</code></pre><p>Here we are also specifying the type of our dog - it will be a JavaScript object.</p><p>In our template in <code>Dog.vue</code> we should replace <code>pet</code> with <code>dog</code>, because we don't have any <code>pet</code>s inside the <code>Dog</code> component, only a passed <code>dog</code> property. Now our template should look the following way:</p><pre class="language-text"><code>&lt;template&gt;
+	&lt;v-card color=&quot;grey lighten-2&quot;&gt;
+	  &lt;v-card-media :src=&quot;dog.img&quot; height=&quot;170px&quot;&gt;
+	  &lt;/v-card-media&gt;
+	    &lt;v-card-title&gt;
+	      &lt;div&gt;
+	        &lt;h3&gt;{{dog.name}}&lt;/h3&gt;
+	        &lt;p class=&quot;breed&quot;&gt;{{dog.breed}}&lt;/p&gt;
+	      &lt;/div&gt;
+	    &lt;/v-card-title&gt;
+	&lt;/v-card&gt;
+&lt;/template&gt;
+</code></pre><p>Now let's move back to our <code>Pets.vue</code> component and make some changes. First of all we should import our newly created <code>Dog</code> component in to <code>Pets.vue</code>. Add this string after the <code>Dogs</code> import statement:</p><pre class="language-text"><code>import Dog from &quot;../components/Dog.vue&quot;;
+</code></pre><p>Now we have to 'explain' to the <code>Pets</code> component that it has a child component inside it. Vue uses a <code>components</code> option for this. Let's add a component option above the <code>data()</code> one:</p><pre class="language-text"><code>export default {
+	  components: {
+	    appDog: Dog
+	  },
+	  data() {
+	    return {
+	      dogs: Dogs
+	    };
+	  }
+	};
+</code></pre><div class="tip custom-block"><p class="custom-block-title">💡</p><p>For each property in the components object, the key will be the name of the custom element, while the value will contain the options object for the component</p></div><div class="tip custom-block"><p class="custom-block-title">💡</p><p>For the component name you can either use a camel-case (<code>appDog</code>) or kebab-case (<code>'app-dog'</code>). Keep in mind that a camel-case name will be 'translated' to kebab-case in HTML tag names. So we will use the HTML custom tag <code>&lt;app-dog&gt;</code> and it will render a <code>Dog</code> component</p></div><p>In <code>Pets.vue</code>, place our custom tag in the space where you deleted the card earlier:</p><pre class="language-text"><code>&lt;v-flex xs12 sm4 md3 v-for=&quot;pet in dogs&quot; :key=&quot;pet.breed&quot;&gt;
+   &lt;app-dog&gt;&lt;/app-dog&gt;
+&lt;/v-flex&gt;
+</code></pre><p>Now we have to pass a <code>dog</code> prop to our <code>Dog</code> component. It will be done with the familiar <code>v-bind</code> directive (remember, you can use its <code>:</code> shortcut). Edit the code you just added to <code>Pets.vue</code>:</p><pre class="language-text"><code>&lt;v-flex xs12 sm4 md3 v-for=&quot;pet in dogs&quot; :key=&quot;pet.breed&quot;&gt;
+  &lt;app-dog :dog=&quot;pet&quot;&gt;&lt;/app-dog&gt;
+&lt;/v-flex&gt;
+</code></pre><p><strong>You should now have a super card layout of dogs! Chapter 2 is completed!</strong></p><h1 id="final-result"><a href="#final-result" aria-hidden="true" class="header-anchor">#</a> Final result</h1><p><img src="/docs/assets/img/petshop_chapter2.d0070578.jpg" alt></p></div><div class="content edit-link"><a href="https://github.com/vuevixens/docs/edit/master//workshop/ch2.md" target="_blank" rel="noopener noreferrer">Help us improve this page!</a><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div><div class="content page-nav"><p class="inner"><span class="prev">
+        ← <a href="/docs/workshop/ch1.html" class="prev">
+          🐶 Chapter 1: Introducing the My Pet Shop Web App
+        </a></span><span class="next"><a href="/docs/workshop/ch3.html">
+          🐶 Chapter 3: Connect your Project to an API
+        </a> →
+      </span></p></div></div></div></div>
+    <script src="/docs/assets/js/8.49ac07dc.js" defer></script><script src="/docs/assets/js/app.1bbca911.js" defer></script>
+  </body>
+</html>
